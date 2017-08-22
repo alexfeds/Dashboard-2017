@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/c3/c3.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+ <!--  <link rel="stylesheet" href="styles/overlay-bootstrap.css"> -->
+  <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+  <!-- endbuild -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+  (function() {
+    'use strict'
+    emailjs.init("user_FEkjfdB7zG7IwO2yhXEaz");
+  })();
+
+  </script>
+  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+  <script>
+  var client = filestack.init('AV79HNQDHT2WPN4X2RbdQz');
+
+  function showPicker() {
+    'use strict'
+    client.pick({}).then(function(result) {
+      console.log(JSON.stringify(result.filesUploaded))
+    });
+  }
+
+  </script>
+</head>
+<body ng-app="dashboard2017App" ui-router-styles>
+  <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <!-- Add your site or application content here -->
+
+  <div id="site-wrapper" ng-controller="RegisterCtrl">
+    <div id="site-canvas">
+      <div class="container-fluid">
+        <div menudirective>
+        </div>
+        <ui-view>
+       
+        </ui-view>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+<script src="bower_components/angular-ui-router-styles/ui-router-styles.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<script src="bower_components/angular-toArrayFilter/toArrayFilter.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/dist/angularfire.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+<script src="bower_components/filepicker-js/filepicker.min.js"></script>
+<script src="bower_components/angular-filepicker/dist/angular_filepicker.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/c3/c3.js"></script>
+<script src="bower_components/angular-chart/angular-chart.js"></script>
+<script src="bower_components/matchmedia/matchMedia.js"></script>
+<script src="bower_components/ngSticky/lib/sticky.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<script type="text/javascript" src="https://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAFwgtiB6FYcXQ_TkvKn_TKCfrglnLrlnU",
+  authDomain: "dashboard-bmw.firebaseapp.com",
+  databaseURL: "https://dashboard-bmw.firebaseio.com",
+  projectId: "dashboard-bmw",
+  storageBucket: "dashboard-bmw.appspot.com",
+  messagingSenderId: "742827040440"
+};
+firebase.initializeApp(config);
+
+</script>
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/galleryCtrl.js"></script>
+<script src="scripts/controllers/sidebarCtrl.js"></script>
+<script src="scripts/directives/headerdirective.js"></script>
+<script src="scripts/controllers/registerCtrl.js"></script>
+<script src="scripts/directives/MenuDirective.js"></script>
+<script src="scripts/controllers/menuCtrl.js"></script>
+<script src="scripts/services/userinfoservice.js"></script>
+<script src="scripts/controllers/userprofileCtrl.js"></script>
+<script src="scripts/directives/footerdirective.js"></script>
+<script src="scripts/controllers/inputCtrl/serviceInputCtrl.js"></script>
+<script src="scripts/controllers/loginCtrl.js"></script>
+<script src="scripts/controllers/reportCtrl/serviceReportCtrl.js"></script>
+<script src="scripts/services/getDatafromDBservice.js"></script>
+<script src="scripts/services/countriesservice.js"></script>
+<script src="scripts/services/modalpopservice.js"></script>
+<script src="scripts/controllers/mycar.js"></script>
+<script src="scripts/controllers/inputCtrl/fuelInputCtrl.js"></script>
+<script src="scripts/controllers/reportCtrl/fuelReportCtrl.js"></script>
+<script src="scripts/controllers/reportCtrl/expensesReportCtrl.js"></script>
+<script src="scripts/controllers/inputCtrl/expensesInputCtrl.js"></script>
+<script src="scripts/controllers/carspecsCtrl.js"></script>
+<!-- endbuild -->

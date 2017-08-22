@@ -1,0 +1,43 @@
+.table_content{
+
+width: auto;
+height: auto;
+
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: black;
+}
+
+
+img.carPhotoLeft {
+     float: left; 
+     padding: 30px;
+         max-width: 30%;
+    height: auto;
+    display: block;
+}
+
+img.carPhotoRight {
+   float: right;
+   padding: 30px;
+       max-width: 30%;
+    height: auto;
+    display: block;
+}
+
+
+
+.CarsTable {
+    margin: auto;
+    width: 40%;
+}
+
+
+.profileGreySmall {;
+    background-color: rgba(23, 28, 32, 0.7);
+   
+    padding: 0.3em 3em 0.7em;
+    color: rgba(255,255,255,1);
+    text-align: center;
+}

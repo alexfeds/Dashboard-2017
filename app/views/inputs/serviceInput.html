@@ -1,0 +1,51 @@
+<!-- Page Content -->
+<div headerdirective>
+</div>
+<p class="theArrow">
+  <a ui-sref="carRecord">
+          <span class="glyphicon glyphicon-arrow-left" style="font-size: 50px;"></span>
+        </a>
+</p>
+<div class="row text-center">
+  <div class="main_content_wrapper">
+    <h2>log service</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-10 col-centered">
+        <div class="profileGrey">
+          <form name="serviceInputForm">
+            <div class="form-group ">
+              <label for="formGroupExampleInput ">Type of service</label>
+              <input type="text " ng-model="inputServiceType " class="form-control " id="formGroupExampleInput " placeholder="new breake pads... " required>
+            </div>
+            <div class="form-group ">
+              <label for="formGroupExampleInput ">Millage</label>
+              <input type="number" ng-model="inputServiceMillage" name="millageInput" class="form-control " id="formGroupExampleInput " required>
+            </div>
+            <div class="form-group">
+              <label for="example-date-input">Date</label>
+              <input class="form-control" type="date" class="form-control" ng-model="inputServiceDate" id="example-date-input">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput ">Price</label>
+              <input type="number" ng-model="inputServicePrice" name="PriceInput" class="form-control " id="formGroupExampleInput " required>
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput ">Attache any pictures</label>
+              <input filepicker type="filepicker-dragdrop" data-fp-services="computer,facebook,dropbox,box" on-success="onSuccess(event.fpfile)" />
+              <img ng-src="{{filepickerLink | fpConvert: {w:200} }}">
+            </div>
+        </div>
+        <p class="text-center ">
+          <button class="btn btn-primary" ng-disabled="serviceInputForm.$invalid" ng-click="saveServiceData(inputServiceType, inputServiceDate, inputServiceMillage, inputServicePrice) ">Save</button>
+        </p>
+        </form>
+      </div>
+      <script type="text/ng-template " id="alert.html ">
+        <div ng-transclude></div>
+      </script>
+    </div>
+  </div>
+</div>
+</div>
+<div footerdirective>
+</div>

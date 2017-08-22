@@ -1,0 +1,200 @@
+<!-- Page Content -->
+<!-- Success circle button with ripple effect -->
+<!-- Floating Action Button like Google Material -->
+<div headerdirective>
+</div>
+<div class="row text-center">
+  <div class="main_content_wrapper">
+    <h2>car profile</h2>
+    <div style="width: 50%" class="col-centered">
+      <div class="profileGrey">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table tableCarProfile" style="margin-top: 5%">
+              <tbody>
+                <div class="thead_wrapper">
+                  <h2> {{trims.model_year}} {{trims.make_display}} {{trims.model_name}} {{trims.model_trim}}</h2>
+                </div>
+                <thead class="thead_wrapper">
+                  <tr>
+                    <th colspan="2"></th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>Country of Origin:</td>
+                  <td>{{trims.make_country}}</td>
+                </tr>
+                <tr>
+                  <td>Sold in US:</td>
+                  <td>Yescheckback</td>
+                </tr>
+                <tr>
+                  <td>Body Style:</td>
+                  <td>{{trims.model_body}}</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">Exterior Colors:</td>
+                  <td>Not Available check back</td>
+                </tr>
+                <tr>
+                  <td valign="top">Interior Colors:</td>
+                  <td>Not Available check back</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Engine Location:</td>
+                  <td>{{trims.model_engine_position}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Type:</td>
+                  <td>{{trims.model_engine_type}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Cylinders:</td>
+                  <td>{{trims.model_engine_cyl}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Displacement (cc):</td>
+                  <td>{{trims.model_engine_cc}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Displacement (l):</td>
+                  <td>{{trims.model_engine_cc/1000}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Displacement (cubic inches):</td>
+                  <td>{{trims.model_engine_cc*61.02}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Bore (mm):</td>
+                  <td>{{trims.model_engine_bore_mm}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Stroke (mm):</td>
+                  <td>{{trims.model_engine_stroke_mm}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Valves Per Cylinder:</td>
+                  <td>{{trims.model_engine_valves_per_cyl}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Valves:</td>
+                  <td>{{trims.model_engine_valves_per_cyl*6}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Max Power (HP):</td>
+                  <td>{{trims.model_engine_power_ps/1.0142}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Max Power (PS):</td>
+                  <td>{{trims.model_engine_power_ps}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Max Power (kW):</td>
+                  <td>{{trims.model_engine_power_ps/1.3596216173039}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Max Power RPM:</td>
+                  <td>{{trims.model_engine_power_rpm}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Max Torque (Nm):</td>
+                  <td>{{trims.model_engine_torque_nm}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Max Torque RPM:</td>
+                  <td>{{trims.model_engine_torque_rpm}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Compression Ratio:</td>
+                  <td>{{trims.model_engine_compression}}</td>
+                </tr>
+                <tr>
+                  <td>Engine Fuel Type:</td>
+                  <td>{{trims.model_engine_fuel}}</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Drive:</td>
+                  <td>{{trims.model_drive}}</td>
+                </tr>
+                <tr>
+                  <td>Transmission Type:</td>
+                  <td>{{trims.model_transmission_type}}</td>
+                </tr>
+                <tr>
+                  <td>Top Speed (KPH):</td>
+                  <td>{{trims.model_top_speed_kph}}</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Doors:</td>
+                  <td>{{trims.model_doors}}</td>
+                </tr>
+                <tr>
+                  <td>Seats:</td>
+                  <td>{{trims.model_seats}}</td>
+                </tr>
+                <tr>
+                  <td>Weight (kg):</td>
+                  <td>{{trims.model_weight_kg}}</td>
+                </tr>
+                <tr>
+                  <td>Length (mm):</td>
+                  <td>{{trims.model_length_mm}}</td>
+                </tr>
+                <tr>
+                  <td>Width (mm):</td>
+                  <td>{{trims.model_width_mm}}</td>
+                </tr>
+                <tr>
+                  <td>Height (mm):</td>
+                  <td>{{trims.model_height_mm}}</td>
+                </tr>
+                <tr>
+                  <td>Wheelbase (mm):</td>
+                  <td>{{trims.model_wheelbase_mm}}</td>
+                </tr>
+                <tr>
+                  <td>Fuel Economy City(l/100km):</td>
+                  <td>{{trims.model_lkm_city}}</td>
+                </tr>
+                <tr>
+                  <td>Fuel Economy HWY(l/100km):</td>
+                  <td>{{trims.model_lkm_hwy}}</td>
+                </tr>
+                <tr>
+                  <td>Fuel Economy Mixed(l/100km):</td>
+                  <td>{{trims.model_lkm_mixed}}</td>
+                </tr>
+                <tr>
+                  <td>Fuel Capacity(l):</td>
+                  <td>{{trims.model_fuel_cap_l}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div footerdirective>
+</div>

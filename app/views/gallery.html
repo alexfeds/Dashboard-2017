@@ -1,0 +1,36 @@
+<!-- Page Content -->
+<div headerdirective>
+</div>
+<div class="row text-center">
+  <div class="main_content_wrapper">
+    <h2>gallery</h2>
+    <div style="width: 80%" class="col-centered">
+      <div class="profileGrey">
+        <div class="row">
+          <div class="gallery_wrapper">
+            <div class="row text-center text-lg-left">
+              <div class="form-group">
+                <label for="formGroupExampleInput ">Attache any pictures</label>
+                <input filepicker type="filepicker-dragdrop" data-fp-services="computer,facebook,dropbox,box" on-success="onSuccess(event.fpfile)" />
+                <img ng-src="{{filepickerLink | fpConvert: {w:200} }}">
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6" ng-repeat=" picture in pictures | filter : { picUrl : '!!' }">
+                <a href="{{picture.picUrl}}" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail img-responsive" ng-src="{{picture.picUrl}}" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6" ng-repeat=" picture in pictures2 | filter : { picUrl : '!!' }">
+                <a href="{{picture.picUrl}}" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail img-responsive" ng-src="{{picture.picUrl}}" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div footerdirective>
+</div>

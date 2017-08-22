@@ -1,0 +1,66 @@
+<!-- Sidebar -->
+<div id="site-menu" ng-cotroller="RegisterCtrl">
+  <ul class="sidebar-nav">
+    <li>
+      <a ui-sref="main">
+                    main
+                    </a>
+    </li>
+    <li>
+      <a ui-sref="gallery">
+                    gallery
+                    </a>
+    </li>
+    <hr style="width: 90%;"></hr>
+    <li class="cabin-header">TOOLS</li>
+    <li>
+      <a ui-sref="carRecord">
+                    log 
+                    </a>
+    </li>
+    <li>
+      <a ui-sref="carReports">
+                    reports
+                    </a>
+    </li>
+    <hr style="width: 90%;"></hr>
+    <li class="cabin-header">PROFILES</li>
+    <li ng-if="$root.loggedinshow">
+      <a ui-sref="userProfile">{{person}}</a>
+    </li>
+    <li>
+      <a ui-sref="carprofile">
+                    my car
+                    </a>
+    </li>
+    <li>
+      <a ui-sref="carSpecs">
+                    cars doc
+                    </a>
+    </li>
+    <hr style="width: 90%;"></hr>
+    <li ng-if="$root.loggedinshow">
+      <a ui-sref="login" ng-click="SignOut()">
+                    <i class=" glyphicon glyphicon-paste">
+                     </i>
+                       Sign out
+            </a>
+    </li>
+    <li ng-if="$root.loggeinhide">
+      <a ui-sref="register">
+                     <i class="glyphicon glyphicon-pencil">
+                      </i>
+                    register
+                    </a>
+    </li>
+    <li ng-if="$root.loggeinhide">
+      <a ui-sref="login">
+                    <i class="  glyphicon glyphicon-paste">
+                     </i>
+                    log in
+                    </a>
+    </li>
+  </ul>
+</div>
+<!-- /#sidebar-wrapper -->
+<!-- /#sidebar-wrapper -->

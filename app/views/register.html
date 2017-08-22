@@ -1,0 +1,39 @@
+<!-- Page Content -->
+<div headerdirective>
+</div>
+<div class="row text-center">
+  <div class="main_content_wrapper">
+    <h2>Registration</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-10 col-centered">
+        <div class="profileGrey">
+          <div ng-show="{{message}} ">
+            <div class="alert alert-warning ">
+              <strong>Warning!</strong> Username or password is incorrect
+            </div>
+          </div>
+          <form ng-submit="Register($event) " name="registerForm ">
+            <div class="form-group ">
+              <label for="email ">Email address:</label>
+              <input type="email" name="emailInput" class="form-control " ng-model="user.email" placeholder="Email address ">
+              <p ng-hide="registerForm.emailInput.$valid" class="help-block">Enter a valid email.</p>
+              <div class="form-group ">
+                <label for="pwd ">Password:</label>
+                <input type="password " ng-model="user.password " placeholder="Password " class="form-control " id="pwd ">
+                <label for="pwd ">Year:</label>
+                <select name="car-years" id="car-years" class="form-control "></select>
+                <label for="pwd ">Make:</label>
+                <select name="car-makes" id="car-makes" class="form-control "></select>
+                <label for="pwd ">Model:</label>
+                <select name="car-models" id="car-models" class="form-control "></select>
+                <label for="pwd ">Trim:</label>
+                <select name="car-model-trims" id="car-model-trims" class="form-control "></select>
+                <button type="submit " value="Submit " class="btn btn-primary">Submit</button>
+          </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div footerdirective>
+    </div>

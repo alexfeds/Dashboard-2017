@@ -1,0 +1,61 @@
+<!-- Page Content -->
+<!-- Success circle button with ripple effect -->
+<!-- Floating Action Button like Google Material -->
+<div headerdirective>
+</div>
+<p class="theArrow">
+  <a ui-sref="carReports">
+          <span class="glyphicon glyphicon-arrow-left" style="font-size: 50px;"></span>
+        </a>
+</p>
+<div class="row text-center">
+  <div class="main_content_wrapper">
+    <h2>service report</h2>
+    <div style="width: 80%" class="col-centered">
+      <div class="profileGrey">
+        <div class="row">
+          <div class="profileGreySmall col-centered">
+            Total spend this month: {{totalMonths}}
+            </br>
+            Total spend: {{totalService}}
+          </div>
+          <div class="chartWrapper">
+            <angular-chart options="options" instance="instance"></angular-chart>
+          </div>
+          <div class="row" style="padding-top: 5%">
+            <div class="profileGreySmall col-centered">
+              <input type="text" ng-model="searchReportFilter" style="float: left; margin-left: 1%; color: black" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="row">
+            <div class="table-responsive">
+              <table st-table="reportData " class="table table-responsive table-hover table-bordered">
+                <thead class="thead-inverse">
+                  <tr>
+                    <th>Date</th>
+                    <th>Millage</th>
+                    <th>Price per Litre</th>
+                    <th>Total Price</th>
+                    <th>Docs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="row in reportData | toArray:false | filter: searchReportFilter">
+                    <td div editable-text="row.serviceType">{{row.serviceType}}</td>
+                    <td div editable-text="row.millage">{{row.millage}}</td>
+                    <td div editable-text="row.date">{{row.date}}</td>
+                    <td div editable-text="row.price">{{row.price}}</td>
+                    <td> <a href="{{row.picUrl}}"><img src="{{row.picUrl}}" style="height: 3%"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="text-center ">
+                <a ui-sref="serviceInput" class="btn btn-primary ">add</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div footerdirective>
+    </div>

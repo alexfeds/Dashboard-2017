@@ -1,0 +1,51 @@
+<!-- Page Content -->
+<div headerdirective>
+</div>
+<p class="theArrow">
+  <a ui-sref="carRecord">
+          <span class="glyphicon glyphicon-arrow-left" style="font-size: 50px;"></span>
+        </a>
+</p>
+<div class="row text-center">
+  <div class="main_content_wrapper">
+    <h2>log fuel expenses</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-10 col-centered">
+        <div class="profileGrey">
+          <form name="FuelInputForm">
+            <div class="form-group ">
+              <label for="formGroupExampleInput ">Millage</label>
+              <input type="number" ng-model="inputFuelMillage" name="FuelInput" class="form-control " id="formGroupExampleInput " required>
+            </div>
+            <div class="form-group">
+              <label for="example-date-input">Date</label>
+              <input class="form-control" type="date" class="form-control" ng-model="inputFuelDate" id="example-date-input">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput ">Litres</label>
+              <input type="number" ng-model="inputFuelLitres" name="LitreInput" class="form-control " id="formGroupExampleInput " required>
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput ">$ per Litre</label>
+              <input type="number" ng-model="inputFuelPrice" name="PriceInput" class="form-control " id="formGroupExampleInput " p required>
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput ">Total</label>
+              <input type="number" ng-model="inputFueltotal" name="totalPriceInput" class="form-control " id="formGroupExampleInput " placeholder="{{inputFuelPrice * inputFuelLitres}} ">
+            </div>
+            Sum: {{inputFuelPrice * inputFuelLitres}}
+        </div>
+        <p class="text-center ">
+          <button class="btn btn-primary " ng-disabled="FuelInputForm.$invalid" ng-click="saveFuelData(inputFuelMillage, inputFuelDate, inputFuelLitres, inputFuelPrice, inputFueltotal) ">Save</button>
+        </p>
+        </form>
+      </div>
+      <script type="text/ng-template " id="alert.html ">
+        <div ng-transclude></div>
+      </script>
+    </div>
+  </div>
+</div>
+</div>
+<div footerdirective>
+</div>
